@@ -42,40 +42,40 @@
 
 El primer paso consistió en diagnosticar la integridad del dataset mediante el cálculo de valores nulos.
 
-> Diagnóstico: Se generó un resumen detallado con el conteo y porcentaje de nulos por columna.
+- Diagnóstico: Se generó un resumen detallado con el conteo y porcentaje de nulos por columna.
 
 
-> Criterio de Exclusión: Se estableció un umbral del 15%. Aquellas variables que superaban este porcentaje de ausencia de datos fueron eliminadas, ya que la imputación en estos niveles podría introducir sesgos significativos.
+- Criterio de Exclusión: Se estableció un umbral del 15%. Aquellas variables que superaban este porcentaje de ausencia de datos fueron eliminadas, ya que la imputación en estos niveles podría introducir sesgos significativos.
 
 
 
-> Imputación: Para las columnas numéricas que se mantuvieron, se utilizó la mediana como medida de tendencia central para rellenar los valores faltantes. Se eligió la mediana por su robustez frente a posibles valores atípicos (outliers).
+- Imputación: Para las columnas numéricas que se mantuvieron, se utilizó la mediana como medida de tendencia central para rellenar los valores faltantes. Se eligió la mediana por su robustez frente a posibles valores atípicos (outliers).
 
 2. **Definición de la Variable Objetivo**
 
 Se identificó la columna `NY.GDP.MKTP.PP.KD ` como el indicador clave del Producto Interno Bruto (PIB).
 
-> Renombrado: Se renombró a `PIB_Level` para facilitar su identificación como la variable objetivo categórica del modelo de clasificación.
+- Renombrado: Se renombró a `PIB_Level` para facilitar su identificación como la variable objetivo categórica del modelo de clasificación.
 
 
 
-> Verificación: Se confirmó que el tipo de dato fuera numérico antes de proceder a cualquier transformación posterior.
+- Verificación: Se confirmó que el tipo de dato fuera numérico antes de proceder a cualquier transformación posterior.
 
 
 3. **Estandarización de Nombres de Columnas**
 
 Para asegurar la compatibilidad con librerías de Python y mejorar la legibilidad del código:
 
-> Se convirtieron todos los encabezados a minúsculas.
+- Se convirtieron todos los encabezados a minúsculas.
 
 
 
-> Se reemplazaron los puntos (`.`) por guiones bajos (`_`).
+- Se reemplazaron los puntos (`.`) por guiones bajos (`_`).
 
 
 
 
-> Se excluyeron de este proceso las columnas de control: country, year y `PIB_Level`.
+- Se excluyeron de este proceso las columnas de control: country, year y `PIB_Level`.
 
 
 4. **Análisis Exploratorio Visual (EDA)**
@@ -84,11 +84,11 @@ Se realizaron visualizaciones para entender la distribución y naturaleza de los
 
 
 
-> Distribución de Categorías: Se utilizó un gráfico de barras (`seaborn`) para observar el balance de las clases en `PIB_Level`. Esto es crucial para identificar si existe un desbalance de clases que pueda afectar el entrenamiento de los modelos de clasificación.
+- Distribución de Categorías: Se utilizó un gráfico de barras (`seaborn`) para observar el balance de las clases en `PIB_Level`. Esto es crucial para identificar si existe un desbalance de clases que pueda afectar el entrenamiento de los modelos de clasificación.
 
-> Visualización Geográfica: Mediante Plotly Express, se generó un mapa coroplético utilizando los códigos ISO-3 de los países. Esto permitió validar la cobertura geográfica del dataset y observar patrones espaciales en la distribución del nivel de PIB a nivel global.
+- Visualización Geográfica: Mediante Plotly Express, se generó un mapa coroplético utilizando los códigos ISO-3 de los países. Esto permitió validar la cobertura geográfica del dataset y observar patrones espaciales en la distribución del nivel de PIB a nivel global.
 
 5. Resumen Estadístico
 
-> Finalmente, se ejecutó un `describe().transpose()`para obtener una visión general de las escalas, medias y desviaciones estándar de las variables resultantes, confirmando que los datos están listos para la etapa de Estandarización y PCA.
+- Finalmente, se ejecutó un `describe().transpose()`para obtener una visión general de las escalas, medias y desviaciones estándar de las variables resultantes, confirmando que los datos están listos para la etapa de Estandarización y PCA.
 
