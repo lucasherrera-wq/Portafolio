@@ -67,7 +67,3 @@ Para garantizar una evaluación robusta, se seleccionaron dos algoritmos con nat
 
 
 
-- `etapa-3`: Foco en el entrenamiento de modelos y resultados finales.
-- main
- main
- main
