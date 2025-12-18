@@ -1,7 +1,5 @@
- etapa-2
-### **Etapa 2: Reducción de Dimensionalidad con PCA**
 
-etapa-1
+### **Etapa 2: Reducción de Dimensionalidad con PCA**
 
 ## **Predicción del Nivel de PIB utilizando Datos del Banco Mundial**
 
@@ -116,8 +114,6 @@ Se realizaron visualizaciones para entender la distribución y naturaleza de los
 - Finalmente, se ejecutó un `describe().transpose()`para obtener una visión general de las escalas, medias y desviaciones estándar de las variables resultantes, confirmando que los datos están listos para la etapa de Estandarización y PCA.
  main
 
-
- etapa-2
 - Seleccionar únicamente variables numéricas y estandarizarlas previamente.
 - Aplicar `PCA` y analizar la varianza explicada por cada componente.
 - Elegir el número de componentes necesarias para explicar entre 70% y 90% de la varianza total, justificando brevemente dicha elección.
@@ -141,4 +137,4 @@ cumpliendo con el principio de parsimonia para evitar el sobreajuste.
 =======
 - `etapa-3`: Foco en el entrenamiento de modelos y resultados finales.
 - main
- main
+
