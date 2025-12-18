@@ -1,47 +1,27 @@
-etapa-1
 
-## **Predicción del Nivel de PIB utilizando Datos del Banco Mundial**
+### **Etapa 1: Análisis Descriptivo e Imputación de Datos**
 
-#### **Propósito del Proyecto**
-Este proyecto tiene como objetivo diseñar y evaluar un modelo de clasificación capaz de predecir el Nivel de Producto Interno Bruto (PIB) de diversas naciones. Utilizando indicadores macroeconómicos, demográficos y sociales provenientes de las bases de datos abiertas del Banco Mundial, el análisis busca identificar qué factores (salud, educación, infraestructura, etc.) tienen mayor peso en la categorización económica de un país.
+**Revisión general del dataset**
 
-El enfoque principal es transformar datos crudos en inteligencia accionable, optimizando la complejidad del modelo mediante técnicas avanzadas de reducción de dimensionalidad.
+- Identificar el número de países, años y variables disponibles.
 
-### **Estructura del Proyecto**
-El desarrollo se divide en tres fases críticas, gestionadas mediante un sistema de control de versiones robusto:
+- Número total de observaciones
 
-1. Ingeniería de Datos y Análisis Exploratorio (EDA)
+- Porcentaje de datos faltantes por variable: En caso que la variable cuente con menos de un 15% de datos NA se recomienda imputar. En caso contrario, eliminar variable.
 
-- Extracción: Obtención de datos reales desde el World Bank API.
- main
-
-- Limpieza: Tratamiento de valores nulos mediante criterios de umbral y técnicas de imputación por mediana.
-
-- Normalización: Estandarización de variables para asegurar la integridad estadística.
-
-2. Optimización de Dimensiones (PCA)
-- Aplicación de Análisis de Componentes Principales (PCA) para mitigar el fenómeno de la "maldición de la dimensionalidad".
-
-- Análisis de la varianza explicada para conservar entre el 70% y 90% de la información original, garantizando un modelo parsimonioso y eficiente.
-
-3. Modelado Predictivo
-- Implementación de algoritmos de clasificación para asignar niveles de PIB.
-
-- Evaluación de métricas de desempeño para validar la precisión de las predicciones.
+- Identificación de outliers relevantes
 
 - Otras observaciones relevantes.
 
 
-### **Flujo de Trabajo y Control de Versiones**
-Para garantizar la trazabilidad y el orden del proyecto, se ha implementado una estrategia de ramificación (branching):
+**Indicaciones**:
 
-- `main`: Rama principal que consolida la versión estable y final del código.
+- Generar una tabla de estadísticas descriptivas: media, mediana, desviación estándar, máximo, mínimo.
 
-- `etapa-1`: Foco en la limpieza, imputación y análisis inicial de datos.
+- Mostrar la distribución del PIB (histograma o boxplot), ya que es la variable objetivo.
 
-- `etapa-2 `: Foco en la transformación matemática y reducción de variables (PCA).
+- Mapa con la distribución del PIB
 
-etapa-1
 - Discretizar la variable dependiente `NY.GDP.MKTP.PP.KD` de aceurdo con la siguiente indicación.
 
     ```python
@@ -54,8 +34,6 @@ etapa-1
     **Nota**: Debe describir de manera clara y ordenada los pasos realizados durante el desarrollo del proyecto, incorporando una breve justificación para cada uno de ellos, de modo que se expliciten las decisiones adoptadas y su coherencia con los objetivos planteados.
 
     Esta indicación es válida para todas las etapas del proyecto.
-
-
 #### **Documentación de los pasos y las decisiones metodológicas.**
 
 1. **Identificación y Manejo de Valores Faltantes**
