@@ -8,6 +8,13 @@ El dataset contiene múltiples variables macroeconómicas, demográficas y socia
 - Construir un nuevo DataFrame que contenga las componentes seleccionadas, el cual será utilizado como insumo para los modelos de clasificación posteriores.
 - Documentar de forma clara los pasos realizados y las decisiones metodológicas adoptadas.
 
+**Justificación Metodológica**
+Se seleccionaron 5 componentes principales.
+Esta elección nos permite reducir la dimensionalidad de 38 a 5 variables,
+manteniendo el 74.66% de la información original (varianza).
+Esto asegura una simplificación del modelo sin una pérdida significativa de capacidad predictiva,
+cumpliendo con el principio de parsimonia para evitar el sobreajuste.
+
 #### **Documentación de los pasos y las decisiones metodológicas.** (Etapa 2)
 
 1. Para la estandarización utilizamos `StandarScaler` debido a las variables macroeconómicas tienen escalas muy distintas (Por ejemplo, porcentajes vs. valores en millones), ya que PCA es sensible a estas diferencias.
