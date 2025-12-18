@@ -90,6 +90,3 @@ Se realizaron visualizaciones para entender la distribución y naturaleza de los
 
 - Finalmente, se ejecutó un `describe().transpose()`para obtener una visión general de las escalas, medias y desviaciones estándar de las variables resultantes, confirmando que los datos están listos para la etapa de Estandarización y PCA.
 
-
-- `etapa-3`: Foco en el entrenamiento de modelos y resultados finales.
-- main
