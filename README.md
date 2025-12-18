@@ -22,7 +22,3 @@ cumpliendo con el principio de parsimonia para evitar el sobreajuste.
 2. Selección por Porcentaje Acumulado de Varianza Explicada: Se seleccionaron 5 componentes principales basándose en el criterio de Porcentaje Acumulado, estableciendo un umbral de retención de información superior al 70%.
 
 3. Aunque para alcanzar un nivel de varianza del 90% se requerirían 10 componentes, la selección de 5 dimensiones logra capturar el 74.66% de la varianza total. En el análisis de indicadores macroeconómicos, este porcentaje se considera suficiente para representar la estructura subyacente de los datos sin incurrir en una excesiva complejidad dimensional. Esta decisión equilibra la representatividad estadística con el principio de parsimonia, garantizando que los modelos de clasificación de la Etapa 3 utilicen variables ortogonales de alta densidad informativa, filtrando componentes menores que aportan una ganancia marginal de varianza a cambio de un mayor riesgo de ruido.
-=======
-- `etapa-3`: Foco en el entrenamiento de modelos y resultados finales.
-- main
-
