@@ -1,0 +1,39 @@
+import wbgapi as wb
+import pandas as pd
+import numpy as np
+from math import ceil
+
+def descargar_en_chunks(indicadores, años, chunk_size=15):
+    keys = list(indicadores.keys())
+    n = len(keys)
+
+    dfs = [main/]
+
+    for i in range(0, n, chunk_size):
+        bloque = keys[i:i+chunk_size]
+        print(f"Descargando bloque {i//chunk_size + 1}: {bloque}")
+
+        df_temp = wb.data.DataFrame(
+            series=bloque,
+            time=años,
+            labels=True
+        )
+
+        dfs.append(df_temp)
+
+    # Unir todos los dataframes
+    df_final = pd.concat(dfs, axis=1)
+
+    # Eliminar columnas duplicadas
+    df_final = df_final.loc[:, ~df_final.columns.duplicated()]
+
+    # Resetear índice y renombrar
+    df_final = (
+        df_final.reset_index()
+                .rename(columns={'economy': 'country', 'time': 'year'})
+    )
+
+    # Eliminar nulos en PIB
+    df_final = df_final.dropna(subset=['NY.GDP.MKTP.PP.KD'])
+
+    return df_final
